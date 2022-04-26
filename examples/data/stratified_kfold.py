@@ -24,7 +24,7 @@ def filter_annotations(annotations, images):
 
 
 def main(args):
-    with open(f'{args.path}new_train_all.json', 'r', encoding='UTF-8') as annotations:
+    with open(f'{args.path}new_train_all_anno_excluded.json', 'r', encoding='UTF-8') as annotations:
         coco = json.load(annotations)
         info = coco['info']
         licenses = coco['licenses']
