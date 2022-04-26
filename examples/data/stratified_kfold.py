@@ -6,7 +6,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 import os
 
 parser = argparse.ArgumentParser(description='Splits COCO annotations file for cross validation.')
-parser.add_argument('--path', type=str, default='../../../data/', help='Path to dataset')
+parser.add_argument('--path', type=str, default='/opt/ml/input/data/', help='Path to dataset')
 parser.add_argument('-n', dest='split', type=int,  default=5,
                     help="A number of split for cross validation")
 
