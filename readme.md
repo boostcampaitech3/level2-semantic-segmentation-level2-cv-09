@@ -3,6 +3,7 @@
 ## Working Directory (04/28 update)
 
 ```
+.
 |-- code (git)
 |   |-- examples
 |   |   |-- baseline_model_feat
@@ -13,6 +14,9 @@
 |   |       |-- data_concat_anno_exclude.ipynb
 |   |       |-- data_concat_img_exclude.ipynb
 |   |       `-- stratified_kfold.py
+|   |-- mmsegmentation
+|   |-- model
+|   |   `-- mmseg
 |   |-- baseline_fcn_resnet50.ipynb
 |   |-- requirements.txt
 |   `-- utils.py
@@ -24,26 +28,49 @@
     |-- batch_03
     |   `-- 0001.jpg
     |-- mmseg
-    |    |-- ann_dir
-    |    |    |-- train0~4
-    |    |    |    `-- *.png
-    |    |    `-- val0~4
-    |    |         `-- *.png
-    |    `-- img_dir
-    |         |-- test
-    |         |    `-- *.jpg
-    |         |-- train0~4
-    |         |    `-- *.jpg 
-    |         `-- val0~4
+    |   |-- ann_dir
+    |   |    |-- train0~4
+    |   |    |    `-- *.png
+    |   |    `-- val0~4
+    |   |         `-- *.png
+    |   `-- img_dir
+    |       |-- test
+    |       |    `-- *.jpg
+    |       |-- train0~4
+    |       |    `-- *.jpg 
+    |       `-- val0~4
     |              `-- *.jpg
     |-- stratified_kfold
-    |    |-- train0~4.json
-    |    `-- val0~4.json
+    |   |-- train0~4.json
+    |   `-- val0~4.json
     |-- new_train_all_anno_excluded.json
     |-- test.json
     |-- train.json
     |-- train_all.json
     `-- val.json
+```
+
+<br>
+
+## MMSegmentation 설치
+
+<br>
+
+_설치 예시_
+```
+conda create -n open-mmlab python=3.10 -y
+conda activate open-mmlab
+
+conda install pytorch=1.11.0 torchvision cudatoolkit=11.3 -c pytorch
+
+pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11/index.html
+
+# mmsegmentation을 설치할 경로 설정. 저는 저희 깃 폴더 내부에 설치했습니다.
+cd ... code/
+
+git clone https://github.com/open-mmlab/mmsegmentation.git
+cd mmsegmentation
+pip install -e .  # or "python setup.py develop"
 ```
 
 <br>
