@@ -11,24 +11,24 @@ class CustomAugmentation:
         if train:
            self.transform = Compose([
                                     HorizontalFlip(p=0.5),
-                                    VerticalFlip(p=0.5),
-                                    albu.ShiftScaleRotate(shift_limit=0.4, 
-                                                      scale_limit=(0.5, 0.9), 
-                                                      rotate_limit=90, 
-                                                      p=1, 
-                                                      border_mode=cv2.BORDER_REPLICATE),
-                                    # albu.ShiftScaleRotate(shift_limit=0.0625, 
-                                    #                 scale_limit=0.2, 
-                                    #                 rotate_limit=15),
+                                    # VerticalFlip(p=0.5),
+                                    # albu.ShiftScaleRotate(shift_limit=0.4, 
+                                    #                   scale_limit=(0.5, 0.9), 
+                                    #                   rotate_limit=90, 
+                                    #                   p=1, 
+                                    #                   border_mode=cv2.BORDER_REPLICATE),
+                                    albu.ShiftScaleRotate(shift_limit=0.0625, 
+                                                    scale_limit=0.2, 
+                                                    rotate_limit=15),
                                     albu.RandomBrightnessContrast(p=0.5),
-                                    Normalize(self.mean,
-                                        self.std),
+                                    # Normalize(self.mean,
+                                    #     self.std),
                                     ToTensorV2()
                                     ])
         else:
             self.transform = Compose([
-                                    Normalize(self.mean,
-                                        self.std),
+                                    # Normalize(self.mean,
+                                    #     self.std),
                                     ToTensorV2()
                                     ])
 
