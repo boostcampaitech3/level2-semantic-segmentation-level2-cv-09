@@ -1,0 +1,8 @@
+- `dataset.py`
+    - `mmsegmentation/configs/__base__/datasets/` 폴더에 추가
+- `default_runtime.py`
+    - `mmsegmentation/configs/__base__/default_runtime.py` 수정
+- `epoch.py`
+    - `mmsegmentation/configs/__base__/schedules/` 폴더에 추가
+-  `fcn_r50-d8_512x512_80e_trash.py`
+    - `mmsegmentation/configs/fcn/` 폴더에 추가
