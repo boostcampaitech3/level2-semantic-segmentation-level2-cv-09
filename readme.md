@@ -30,7 +30,7 @@
 ### 🏆 LB Score
 
 - Public LB: 0.8250 mIoU(2등/19팀)
-- Private LB: 0.7476 mAP(8등/19팀) 
+- Private LB: 0.7476 mIoU(8등/19팀) 
 
 ![output](https://user-images.githubusercontent.com/82289435/168489577-80ff9933-1234-4328-b09f-09ef103bf569.png)
 
