@@ -1,23 +1,27 @@
-### data_concat_img_exclude.ipynb
+### data_concatenation
 
-- train_all.json에 data.json에서 유출된 annotation을 추가하는 코드입니다.
-- concat 시, category가 0인 annotation이 있는 이미지를 제외합니다.
-
----
-
-### data_concat_anno_exclude.ipynb
-
-- train_all.json에 data.json에서 유출된 annotation을 추가하는 코드입니다.
-- concat 시, category가 0인 annotation을 제외합니다.
+- train_all.json에 data.json에서 유출된 annotation을 추가
 
 ---
 
-### stratified_kfold.py
+### stratified_kfold
 
-- Stratified K-fold validation set을 만드는 코드입니다.
+- Stratified K-fold validation set 만들기
 
 ---
 
-### convert_mmseg.ipynb
+### convert_format
 
-- 원본 데이터를 mmsegmentation 형식에 맞추어 변환하는 코드입니다.
+- Data format 변경
+
+---
+
+### data_cleansing
+
+- noise가 있는 데이터를 제외
+
+---
+
+### pseudo_labeling
+
+- pseudo labeling

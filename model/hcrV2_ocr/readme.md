@@ -1,0 +1,1 @@
+## Google Drive에서 hcrnetv2_w64.pth 다운받은 후 ./hcrV2_ocr로 집어넣기
